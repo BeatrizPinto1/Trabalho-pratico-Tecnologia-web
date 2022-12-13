@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link href="principalNovo.css" rel="stylesheet">
+</head>
+<body>
+	<div class="topnav" id="myTopnav">
+		<a style="margin-top:0px" id="logo" href="PrincipalNovo.html" title="USF PortoCentro">
+            <img src="Logo USFPC.jpg" style="margin-left:1px" alt="logo" width="50" height="50">
+        </a>
+		<a href="Quem somos.html">Quem somos</a>
+		 <div class="dropdown">
+			<button class="dropbtn">O que fazemos
+			  <i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+			  <a href="O que fazemos.html">O que fazemos</a>
+			  <a href="Consultas.html">Consultas</a>	
+			</div>
+		</div> 
+		<a href="Indicadores.html" >Indicadores</a>
+        <a href="Recursos.html" >Recursos</a>
+        <a href="Mais apoio.html" >Mais apoio</a>
+        <a href="login.html" >Login</a>
+		  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+          </a>
+	</div>
+
+        <div class="textox" style="background:none;">
+
+            <div class="mySlides fade" style="display: none;">
+                <img src="funcionariossaude.jpg" class="imgslide" width="450" height="450">
+            </div>
+
+            <div class="mySlides fade" style="display: none;">
+                <img src="covid-19.jpg" class="imgslide" width="450" height="450">
+            </div>
+
+
+            <div class="mySlides fade" style="display: block;">
+                <img src="normas.jpg" class="imgslide" width="450" height="450">
+            </div>
+
+            <div class="mySlides fade" style="display: none;">
+                <img src="portal_sns.jpg" class="imgslide" width="450" height="450">
+            </div>
+
+            <div style="margin:auto;">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot active"></span>
+                <span class="dot"></span>
+
+            </div>
+
+            <br>
+            <div class="textox">
+                <h5>Somos um grupo de profissionais, constituídos por médicos, enfermeiros e secretários clínicos, que prestam cuidados de saúde personalizados a uma determinada população, garantindo a acessibilidade, a continuidade e a globalidade dos cuidados prestados.</h5>
+            </div>
+        </div>
+
+        
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 3500);
+            }
+			
+			function myFunction() {
+			  var x = document.getElementById("myTopnav");
+			  if (x.className === "topnav") {
+				x.className += " responsive";
+			  } else {
+				x.className = "topnav";
+			  }
+			}
+        </script>
+
+
+<footer class="footer">
+        
+    <p>USF PortoCentro<br>
+    Rua de Santos Pousada, 297 - 1º<br>
+    4000-486 Porto, PORTUGAL<br>
+     Contacte-nos<br>
+     (351) 225191360</p>
+     <h3>Redes Sociais:</h3>
+    <div class="centrartexto">
+     <a href="https://www.facebook.com/pages/category/Medical---Health/USF-PortoCentro-113082843768864/" target="_blank">
+        <img class="redessociais" src="facebook.png" width="30" height="30" >
+    </a>
+   </div>
+ </footer>
+
+<script src="login1.js"></script>
+
+</body>
+</html>
